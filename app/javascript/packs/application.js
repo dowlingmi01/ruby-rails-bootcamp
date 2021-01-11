@@ -14,6 +14,9 @@ ActiveStorage.start()
 
 import 'bootstrap/dist/js/bootstrap'
 import 'bootstrap/dist/css/bootstrap'
-require("stylesheets/application.scss")
-
+// import "font-awesome-sprockets"
+// import "font-awesome"
 import "@fortawesome/fontawesome-free/css/all"
+require("stylesheets/application.scss")
+require("trix")
+require("@rails/actiontext")
