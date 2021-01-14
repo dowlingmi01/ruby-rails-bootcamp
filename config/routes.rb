@@ -4,5 +4,5 @@ Rails.application.routes.draw do
   resources :users, only: [:index]
   get "home/index"
   root "home#index"
-  get "privacy_policy", to: "home#privacy_policy"
+  # get "privacy_policy", to: "home#privacy_policy"
 end

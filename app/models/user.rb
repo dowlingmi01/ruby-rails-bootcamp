@@ -5,8 +5,8 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable, :trackable
 
   def to_s
-  email
+    email
   end
 
-has_many :courses
+  has_many :courses
 end
