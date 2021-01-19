@@ -1,5 +1,3 @@
-require "active_support/core_ext/integer/time"
-
 Rails.application.configure do
   config.action_mailer.default_url_options = { :host => 'unlikely-leader-lms.herokuapp.com', :protocol => 'https' }
   config.action_mailer.perform_deliveries = true

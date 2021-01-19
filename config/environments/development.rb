@@ -1,5 +1,3 @@
-require "active_support/core_ext/integer/time"
-
 Rails.application.configure do
 config.hosts << "fe43b860b7da4607a2abba6baefa15f9.vfs.cloud9.eu-central-1.amazonaws.com"
 config.action_mailer.default_url_options = { host: 'https://fe43b860b7da4607a2abba6baefa15f9.vfs.cloud9.eu-central-1.amazonaws.com/'}
@@ -45,10 +43,10 @@ config.action_mailer.delivery_method = :test
   config.active_support.deprecation = :log
 
   # Raise exceptions for disallowed deprecations.
-  config.active_support.disallowed_deprecation = :raise
+  # config.active_support.disallowed_deprecation = :raise
 
   # Tell Active Support which deprecation messages to disallow.
-  config.active_support.disallowed_deprecation_warnings = []
+  # config.active_support.disallowed_deprecation_warnings = []
 
   # Raise an error on page load if there are pending migrations.
   config.active_record.migration_error = :page_load
