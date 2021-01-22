@@ -1,18 +1,31 @@
 Rails.application.configure do
-  config.action_mailer.default_url_options = { :host => 'unlikely-leader-lms.herokuapp.com', :protocol => 'https' }
   config.action_mailer.perform_deliveries = true
   config.action_mailer.raise_delivery_errors = true
   config.action_mailer.delivery_method = :smtp
-  
-  config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
   port: 587,
-  address: 'email-smtp.eu-central-1.amazonaws.com',
-  user_name: 'AKIAVQHLMDY6FCGMDDVL',
-  password: 'BEgR5DBx+l5bSt47KqyGEzuQY7S8BqyaMXpxBLJ4AC4u',
-  authentication: :plain,
-  enable_starttls_auto: true
+    address: 'email-smtp.eu-west-1.amazonaws.com',
+    user_name: 'AKIAVQHLMDY6FCGMDDVL',
+    password: 'BEgR5DBx+l5bSt47KqyGEzuQY7S8BqyaMXpxBLJ4AC4u',
+    authentication: :plain,
+    enable_starttls_auto: true
 }
+#   config.action_mailer.delivery_method = :smtp
+#   config.action_mailer.smtp_settings = {
+#     address: 'email-smtp.eu-central-1.amazonaws.com',
+#     port: 587,
+#     domain: 'unlikely-leader-lms.herokuapp.com',
+#     user_name: 'AKIAVQHLMDY6FCGMDDVL',
+#     password: 'BEgR5DBx+l5bSt47KqyGEzuQY7S8BqyaMXpxBLJ4AC4u',
+#     authentication: :plain,
+#     enable_starttls_auto: true
+# }
+#   config.action_mailer.default_url_options = {
+#     host:  'unlikely-leader-lms.herokuapp.com',
+#     port: 587,
+#     protocol: 'https' 
+# }
+
   # Settings specified here will take precedence over those in config/application.rb.
 
   # Code is not reloaded between requests.
