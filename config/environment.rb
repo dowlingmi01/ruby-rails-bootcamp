@@ -12,6 +12,7 @@ ActionMailer::Base.smtp_settings = {
   :password => ENV['SMTP_CREDENTIALS_PASSWORD'], 
   # :user_name => ENV['michaeldowling440@gmail.com'], 
   # :password => ENV['Tr00p3r&P0lly@r3d0gs'], 
-  :domain => 'unlikely-leader-lms.herokuapp.com', 
+  :domain => 'heroku.com',
+  # :domain => 'unlikely-leader-lms.herokuapp.com', 
   :enable_starttls_auto => true 
 }

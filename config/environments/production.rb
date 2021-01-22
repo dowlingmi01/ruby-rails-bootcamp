@@ -1,9 +1,11 @@
 Rails.application.configure do
+  config.action_mailer.default_url_options = {host: "unlikely-leader-lms.herokuapp.com", protocol: "https"}
   config.action_mailer.perform_deliveries = true
   config.action_mailer.raise_delivery_errors = true
+  
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-  port: 587,
+    port: 587,
     address: 'email-smtp.eu-west-1.amazonaws.com',
     user_name: 'AKIAVQHLMDY6FCGMDDVL',
     password: 'BEgR5DBx+l5bSt47KqyGEzuQY7S8BqyaMXpxBLJ4AC4u',
