@@ -59,4 +59,7 @@ gem "devise"
 gem 'friendly_id', '~> 5.2.4'
 gem 'sendgrid-ruby'
 gem 'ransack'
+gem 'public_activity'
+gem "rolify"
+gem "pundit"
 # gem 'font-awesome-sass', '~> 5.12.0'
