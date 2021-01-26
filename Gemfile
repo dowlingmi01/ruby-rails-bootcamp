@@ -62,4 +62,5 @@ gem 'ransack'
 gem 'public_activity'
 gem "rolify"
 gem "pundit"
+gem "exception_notification", group: :production # email notifications if any errors in production
 # gem 'font-awesome-sass', '~> 5.12.0'
