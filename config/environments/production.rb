@@ -13,21 +13,14 @@ Rails.application.configure do
     authentication: :plain,
     enable_starttls_auto: true
 }
-#   config.action_mailer.delivery_method = :smtp
-#   config.action_mailer.smtp_settings = {
-#     address: 'email-smtp.eu-central-1.amazonaws.com',
-#     port: 587,
-#     domain: 'unlikely-leader-lms.herokuapp.com',
-#     user_name: 'AKIAVQHLMDY6FCGMDDVL',
-#     password: 'BEgR5DBx+l5bSt47KqyGEzuQY7S8BqyaMXpxBLJ4AC4u',
-#     authentication: :plain,
-#     enable_starttls_auto: true
-# }
-#   config.action_mailer.default_url_options = {
-#     host:  'unlikely-leader-lms.herokuapp.com',
-#     port: 587,
-#     protocol: 'https' 
-# }
+
+  Rails.application.config.middleware.use ExceptionNotification::Rack,
+    email: {
+      deliver_with: :deliver, # Rails >= 4.2.1 do not need this option since it defaults to :deliver_now
+      email_prefix: "[PREFIX] ",
+      sender_address: %("corsego error" <michaeldowling440@gmail.com>),
+      # exception_recipients: %w[yshmarov@gmail.com]
+    }
 
   # Settings specified here will take precedence over those in config/application.rb.
 
