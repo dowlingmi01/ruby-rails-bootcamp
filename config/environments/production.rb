@@ -3,13 +3,13 @@ Rails.application.configure do
   config.action_mailer.perform_deliveries = true
   config.action_mailer.raise_delivery_errors = true
   config.log_level = :debug
-  
   config.action_mailer.delivery_method = :smtp
+
   config.action_mailer.smtp_settings = {
     port: 587,
-    address: 'email-smtp.eu-central-1.amazonaws.com',
-    user_name: 'AKIAVQHLMDY6FCGMDDVL',
-    password: 'BEgR5DBx+l5bSt47KqyGEzuQY7S8BqyaMXpxBLJ4AC4u',
+    address: Rails.application.credentials[:smtp][address:'email-smtp.eu-central-1.amazonaws.com'],
+    user_name: Rails.application.credentials[:smtp][user_name:'AKIAVQHLMDY6FCGMDDVL'],
+    password: Rails.application.credentials[:smtp][password: 'BEgR5DBx+l5bSt47KqyGEzuQY7S8BqyaMXpxBLJ4AC4u'],
     authentication: :plain,
     enable_starttls_auto: true
 }
