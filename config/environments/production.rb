@@ -7,9 +7,9 @@ Rails.application.configure do
 
   config.action_mailer.smtp_settings = {
     port: 587,
-    address: Rails.application.credentials[:smtp][address:'email-smtp.eu-central-1.amazonaws.com'],
-    user_name: Rails.application.credentials[:smtp][user_name:'AKIAVQHLMDY6FCGMDDVL'],
-    password: Rails.application.credentials[:smtp][password: 'BEgR5DBx+l5bSt47KqyGEzuQY7S8BqyaMXpxBLJ4AC4u'],
+    address: 'email-smtp.eu-central-1.amazonaws.com',
+    user_name: 'AKIAVQHLMDY6FCGMDDVL',
+    password: 'BEgR5DBx+l5bSt47KqyGEzuQY7S8BqyaMXpxBLJ4AC4u',
     authentication: :plain,
     enable_starttls_auto: true
 }
